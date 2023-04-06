@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <style>
+        .main {
+            height: 100px;
+            width: 100px;
+            /* background-color: gray; */
+            margin: 200px auto;
+            position: relative;
+            transform-style: preserve-3d;
+        }
+        
+        .front {
+            background-color: lightblue;
+            animation: hem 3s infinite;
+            transform: translateZ(50px);
+            backface-visibility: hidden;
+        }
+        
+        .right {
+            background-color: lightcoral;
+            transform: rotateY(90deg) translateZ(50px);
+            animation: dev 3s infinite;
+            backface-visibility: hidden;
+        }
+        
+        .back {
+            background-color: lightgreen;
+            transform: rotateY(180deg) translateZ(50px);
+            animation: par 3s infinite;
+            backface-visibility: hidden;
+        }
+        
+        .left {
+            transform: rotateY(270deg) translateZ(50px);
+            background-color: lightsalmon;
+            animation: rit 3s infinite;
+            backface-visibility: hidden;
+        }
+        
+        .x {
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+            /* background-color: black; */
+            color: #fff;
+            text-align: center;
+            line-height: 100px;
+            font-size: 1.4rem;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transition: 1s;
+        }
+        /* .main:hover .front {
+            transform: rotateY(-90deg) translateZ(50px);
+        }
+        
+        .main:hover .back {
+            transform: rotateY(90deg) translateZ(50px);
+        }
+        
+        .main:hover .right {
+            transform: rotateY(0deg) translateZ(50px);
+        }
+        
+        .main:hover .left {
+            transform: rotateY(-180deg) translateZ(50px);
+        } */
+        
+        @keyframes hem {
+            0% {
+                transform: translateZ(50px);
+            }
+            25% {
+                transform: rotateY(90deg) translateZ(50px);
+            }
+            50% {
+                transform: rotateY(180deg) translateZ(50px);
+            }
+            75% {
+                transform: rotateY(270deg) translateZ(50px);
+            }
+            100% {
+                transform: rotateY(360deg) translateZ(50px);
+            }
+        }
+        
+        @keyframes dev {
+            0% {
+                transform: rotateY(90deg) translateZ(50px);
+            }
+            25% {
+                transform: rotateY(180deg) translateZ(50px);
+            }
+            50% {
+                transform: rotateY(270deg) translateZ(50px);
+            }
+            75% {
+                transform: rotateY(360deg) translateZ(50px);
+            }
+            100% {
+                transform: rotateY(450deg) translateZ(50px);
+            }
+        }
+        
+        @keyframes par {
+            0% {
+                transform: rotateY(180deg) translateZ(50px);
+            }
+            25% {
+                transform: rotateY(270deg) translateZ(50px);
+            }
+            50% {
+                transform: rotateY(360deg) translateZ(50px);
+            }
+            75% {
+                transform: rotateY(450deg) translateZ(50px);
+            }
+            100% {
+                transform: rotateY(510deg) translateZ(50px);
+            }
+        }
+        
+        @keyframes rit {
+            0% {
+                transform: rotateY(270deg) translateZ(50px);
+            }
+            25% {
+                transform: rotateY(360deg) translateZ(50px);
+            }
+            50% {
+                transform: rotateY(450deg) translateZ(50px);
+            }
+            75% {
+                transform: rotateY(510deg) translateZ(50px);
+            }
+            100% {
+                transform: rotateY(600deg) translateZ(50px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="front x">
+            <i class="fa-solid fa-house"></i>
+        </div>
+        <div class="right x ">
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="back x ">
+            <i class="fa-brands fa-facebook"></i>
+        </div>
+        <div class="left x ">
+            <i class="fa-solid fa-star"></i>
+        </div>
+    </div>
+</body>
+
+</html>
